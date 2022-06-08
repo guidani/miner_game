@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/arma1.png" type="Texture" id=1]
+[ext_resource path="res://entidades/Jogador.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 54.5, 55 )
+
+[node name="Jogador" type="Area2D"]
+position = Vector2( 360, 0 )
+rotation = 1.5708
+scale = Vector2( 0.6, 0.6 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.5, 1 )
+shape = SubResource( 1 )
+
+[node name="Canhoes" type="Node2D" parent="."]
+
+[node name="Central" type="Position2D" parent="Canhoes"]
+position = Vector2( 50, 0 )
