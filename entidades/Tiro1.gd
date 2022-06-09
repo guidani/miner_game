@@ -16,7 +16,7 @@ func _process(delta):
 	movement = movement.move_toward(mouse_position, delta)
 	movement = movement.normalized() * speed
 	position = position + movement
-	if position.y >= 500:
+	if position.y >= 1500:
 		print('Deletado')
 		queue_free()
 

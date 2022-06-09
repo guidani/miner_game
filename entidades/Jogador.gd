@@ -1,11 +1,9 @@
 extends Area2D
 
 var tiro = preload("res://entidades/Tiro1.tscn")
-# var total_municao = 30
-# var total_municao = GlobalVariables.arma_um_municao
 
 var pode_atirar = true
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
 	self.rotate(90)
 	set_process(true)
@@ -16,7 +14,6 @@ func _process(delta):
 	look_at(get_global_mouse_position())
 	if Input.is_action_just_pressed("atirar") and GlobalVariables.arma_um_municao > 0:
 		GlobalVariables.arma_um_municao -= 1
-		# print(total_municao)
 		atirar()
 
 # Relacionado ao tiro
