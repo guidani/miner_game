@@ -28,3 +28,10 @@ func atirar():
 	instancia_tiro.position = get_global_position()
 	get_parent().add_child(instancia_tiro)
 	
+
+
+func _on_Jogador_area_entered(area):
+	if area.is_in_group("Destrutivel"):
+		get_tree().change_scene("res://GameOver.tscn")
+		queue_free()
+

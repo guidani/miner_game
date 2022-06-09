@@ -26,3 +26,5 @@ shape = SubResource( 1 )
 
 [node name="Central" type="Position2D" parent="Canhoes"]
 position = Vector2( 50, 0 )
+
+[connection signal="area_entered" from="." to="." method="_on_Jogador_area_entered"]
