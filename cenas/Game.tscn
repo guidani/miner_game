@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://entidades/GeradorDeBlocos.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entidades/Jogador.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://fonts/Inconsolata-Regular.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://assets/buttonNormal.png" type="Texture" id=6]
 [ext_resource path="res://assets/buttonPressed.png" type="Texture" id=7]
+[ext_resource path="res://audio/cave_theme_2.wav" type="AudioStream" id=8]
 
 [sub_resource type="GDScript" id=2]
 script/source = "extends TextureButton
@@ -70,6 +71,10 @@ custom_fonts/font = SubResource( 1 )
 text = "MENU"
 align = 1
 valign = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+autoplay = true
 
 [connection signal="tree_exited" from="Jogador" to="HUD/BtnMenu" method="_on_Jogador_tree_exited"]
 [connection signal="pressed" from="HUD/BtnMenu" to="HUD/BtnMenu" method="_on_BtnStart_pressed"]
