@@ -14,6 +14,7 @@ func receber_dano(dano):
 	vida -= dano
 	# Animação da explosão
 	if vida <= 0:
+		GlobalVariables.pontuacao += 10
 		var instancia_explosao = explosao.instance()
 		instancia_explosao.position = global_position
 		get_tree().get_current_scene().add_child(instancia_explosao)
