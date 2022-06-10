@@ -21,7 +21,7 @@ func spawn_object(newXPos):
 	$Timer.wait_time = 2.5
 
 func _on_Timer_timeout():
-	for i in [32,96,160,224,288,352,416,480,544,608,672,736,800,864,928,992]:
+	for i in [160,224,288,352,416,480,544,608,672,736,800,864]:
 		spawn_object(i)
 #	spawn_object(32)
 #	spawn_object(96)
