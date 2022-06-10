@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/buttonNormal.png" type="Texture" id=1]
 [ext_resource path="res://assets/buttonPressed.png" type="Texture" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://cenas/BtnStart.gd" type="Script" id=4]
 [ext_resource path="res://cenas/BtnExite.gd" type="Script" id=5]
 [ext_resource path="res://audio/dungeon_theme_2.wav" type="AudioStream" id=6]
+[ext_resource path="res://assets/miner-logo.png" type="Texture" id=7]
+[ext_resource path="res://assets/3b09d594-b8c3-4c7e-9552-78df0185d035_scaled.jpg" type="Texture" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 45
@@ -16,10 +18,10 @@ font_data = ExtResource( 3 )
 [node name="HUD" type="CanvasLayer" parent="."]
 
 [node name="BtnStart" type="TextureButton" parent="HUD"]
-margin_left = 417.0
-margin_top = 275.0
-margin_right = 607.0
-margin_bottom = 324.0
+margin_left = 250.0
+margin_top = 460.0
+margin_right = 440.0
+margin_bottom = 509.0
 texture_normal = ExtResource( 1 )
 texture_pressed = ExtResource( 2 )
 script = ExtResource( 4 )
@@ -33,10 +35,10 @@ align = 1
 valign = 1
 
 [node name="BtnExit" type="TextureButton" parent="HUD"]
-margin_left = 417.0
-margin_top = 345.0
-margin_right = 607.0
-margin_bottom = 394.0
+margin_left = 600.0
+margin_top = 460.0
+margin_right = 790.0
+margin_bottom = 509.0
 texture_normal = ExtResource( 1 )
 texture_pressed = ExtResource( 2 )
 script = ExtResource( 5 )
@@ -52,6 +54,18 @@ valign = 1
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
 autoplay = true
+
+[node name="Logo" type="Sprite" parent="."]
+position = Vector2( 511.346, 212.937 )
+scale = Vector2( 0.0763245, 0.0763245 )
+z_index = 1
+texture = ExtResource( 7 )
+
+[node name="3B09D594-b8C3-4C7e-9552-78Df0185D035Scaled" type="Sprite" parent="."]
+position = Vector2( 520, 312 )
+scale = Vector2( 1.43397, 1.43397 )
+z_index = -2
+texture = ExtResource( 8 )
 
 [connection signal="pressed" from="HUD/BtnStart" to="HUD/BtnStart" method="_on_BtnStart_pressed"]
 [connection signal="pressed" from="HUD/BtnExit" to="HUD/BtnExit" method="_on_BtnExit_pressed"]
