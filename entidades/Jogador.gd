@@ -12,8 +12,10 @@ func _ready():
 func _process(delta):
 	# Faz o jogador olhar para o mouse
 	look_at(get_global_mouse_position())
-	if Input.is_action_just_pressed("atirar") and GlobalVariables.arma_um_municao > 0:
-		GlobalVariables.arma_um_municao -= 1
+#	if Input.is_action_just_pressed("atirar") and GlobalVariables.arma_um_municao > 0:
+#		GlobalVariables.arma_um_municao -= 1
+#		atirar()
+	if Input.is_action_just_pressed("atirar"):
 		atirar()
 
 # Relacionado ao tiro
